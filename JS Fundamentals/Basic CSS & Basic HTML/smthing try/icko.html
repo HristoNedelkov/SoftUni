@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>  
+<html>  
+    <head>  
+        <title>  
+            Check if string contains only digits 
+        </title> 
+    </head>  
+      
+    <body style = "text-align:center;" id = "body">  
+      
+        <h1 style = "color:green;" >  
+            GeeksForGeeks  
+        </h1> 
+      
+        <p id = "GFG_UP" style = "font-size: 15px; font-weight: bold;"> 
+        </p> 
+          
+        <button onclick = "gfg_Run()">  
+            check 
+        </button> 
+          
+        <p id = "GFG_DOWN" style =  
+            "color:green; font-size: 20px; font-weight: bold;"> 
+        </p> 
+          
+        <script> 
+            var el_up = document.getElementById("GFG_UP"); 
+            var el_down = document.getElementById("GFG_DOWN"); 
+            var path = "+4323424242"; 
+            el_up.innerHTML = "String = '"+path + "'"; 
+          
+            function gfg_Run() { 
+                el_down.innerHTML = !/\D/.test(path); 
+            }          
+        </script>  
+    </body>  
+</html> 

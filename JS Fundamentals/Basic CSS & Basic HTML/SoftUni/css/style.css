@@ -1,0 +1,73 @@
+body {
+    background-color:deepskyblue;
+}
+
+.wrapper {
+    width: 800px;
+    margin: auto;
+    height: 2px;
+}
+
+h1, h2, h3, h4, p {
+    color: white;
+}
+
+#primary-title {
+    font-family: 'Parisienne', cursive;
+    font-size: 48px;
+}
+
+p {
+    color: gray;
+}
+
+p.pretty-text {
+    font-style: italic;
+}
+
+#specific-div p {
+    background-color: yellow;
+
+}
+
+.menu {
+    text-align: center;
+}
+
+li {
+     /* border-width: 20px;
+    border-style: solid
+    border-color: yellow; 
+
+     border: 2px solid yellow; 
+    list-style: none;
+    display: inline; */
+    list-style-type: upper-roman;
+    display: inline;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    margin-left: 20px;
+    font-family: verdana;
+    font-weight: bold;
+}
+
+li a:hover {
+    background-color: white;
+    color: pink;
+    padding: 10px;
+    margin-left: 0;
+}
+#thank-you-massege {
+        font-stretch: expanded;
+        font-size: larger;
+        color: firebrick;
+        font-weight: 700;
+}
+.pretty-text {
+    font-style: italic;
+}
+ 
