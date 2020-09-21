@@ -48,7 +48,7 @@ for (let line of arr) {
 
         }
         //console.log(line);
-~
+
         if (line == "X X X" || line == "O O O ") {
            
             return `Winnnn!!!!`
