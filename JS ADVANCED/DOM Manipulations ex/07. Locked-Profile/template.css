@@ -21,6 +21,7 @@ body{
     background: url(background.png) no-repeat center center;
     background-size: cover;
     margin-top: 1%; 
+    background-color: indianred;
 }
 
 #exercise{   
@@ -51,6 +52,7 @@ input[type="button"], button{
     margin-left: 12%;
     width: 18%;
     vertical-align: top;
+    background-color: wheat;
 }
 
 .userIcon{
