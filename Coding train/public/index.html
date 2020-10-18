@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Gelloo!</h1>
+    Gosho
+
+    <span>
+        <p id="lat">Latitude is: </p><br>
+        <p id="lon">Longitude is: </p>
+    </span>
+    <script>
+
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(position => {
+                let lon = position.coords.longitude
+                let lat = position.coords.latitude
+                document.getElementById('lat').innerHTML += lon + "&deg;";
+                document.getElementById('lon').innerHTML += lat + "&deg;";
+
+
+                const data = {
+                    lat,
+                    lon
+                }
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                };
+                fetch('/api', options)
+            })
+        } else {
+            console.log('geolocation not available')
+        }
+
+    </script>
+
+
+</body>
+
+</html>
