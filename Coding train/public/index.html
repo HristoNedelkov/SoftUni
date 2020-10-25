@@ -19,16 +19,16 @@
 
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition(position => {
-                let lon = position.coords.longitude
-                let lat = position.coords.latitude
-                document.getElementById('lat').innerHTML += lon + "&deg;";
-                document.getElementById('lon').innerHTML += lat + "&deg;";
+                const lat = position.coords.latitude
+                const lon = position.coords.longitude
+                document.getElementById('lat').innerHTML += lat + "&deg;";
+                document.getElementById('lon').innerHTML += lon + "&deg;";
 
 
                 const data = {
                     lat,
                     lon
-                }
+}
                 const options = {
                     method: 'POST',
                     headers: {
