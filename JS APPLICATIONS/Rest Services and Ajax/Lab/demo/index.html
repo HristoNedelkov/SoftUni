@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+    <h3>Here are the heroes from star wars!</h3>
+    <ul class="list">
+
+    </ul>
+    <script>
+        let url = 'https://swapi.dev/api/people/'
+        fetch(url)
+            .then(res => res.json())
+            .then(response => {
+                let allNames = response.results
+                let ul = document.querySelector('.list')
+                ul.innerHTML = allNames.map(el => `<li>${el.name}</li>`).join("\n")
+            })
+    </script>
+</body>
+
+</html>
