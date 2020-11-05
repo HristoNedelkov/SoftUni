@@ -1,0 +1,1 @@
+Test all problems in terminal with - npm test, or with console. :)
