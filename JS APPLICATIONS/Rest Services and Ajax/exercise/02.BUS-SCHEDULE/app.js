@@ -15,6 +15,9 @@ let result = (function solve() {
                 arrBtn.disabled = ''
 
             })
+            .catch(e => {
+                info.textContent = `probemm: ${e}`
+            })
 
     }
 
