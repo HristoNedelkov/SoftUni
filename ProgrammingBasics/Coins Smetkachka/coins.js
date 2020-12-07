@@ -2,10 +2,6 @@
 coins([145.79])
 
 
-
-
-
-
 function coins(input) {
    let money1 = +input.shift()
     let money = money1
@@ -107,20 +103,20 @@ function coins(input) {
 
 
     
-    console.log(`Твоетo ресто  е: ${money1}`)
-    console.log(`Общо монети за връщане: ${coins} !`)
+    console.log(`Your resto is: ${money1}`)
+    console.log(`The money in your accont: ${coins} !`)
     console.log("")
     console.log("")
     
-console.log(`Рестото ти е: `)
-console.log(`${dvulewki} - 2лев `)
-console.log(`${levcheta} - 1лев`)
-console.log(`${petdesest} - 50ст`)
-console.log(`${dwaisestot} - 20ст`)
-console.log(`${desetstot} - 10ст`)
-console.log(`${petstot} - 5ст`)
-console.log(`${dwestot} - 2ст`)
-console.log(`${ednastot} - 1ст`)
+console.log(`You are with only: `)
+console.log(`${dvulewki} - 2lv `)
+console.log(`${levcheta} - 1lv`)
+console.log(`${petdesest} - 50st`)
+console.log(`${dwaisestot} - 20st`)
+console.log(`${desetstot} - 10st`)
+console.log(`${petstot} - 5st`)
+console.log(`${dwestot} - 2st`)
+console.log(`${ednastot} - 1st`)
 
 
 
