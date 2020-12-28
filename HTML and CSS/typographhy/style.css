@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+body {
+    font-size: 18px;
+    padding: 50px 100px;
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+p {
+    margin: 0;
+    padding:0 0 1.5em 0;
+}
+h1, h2, h3, section {
+    padding-bottom: 20px;
+    border: 2px solid violet;
+    border-width: 1px 2px 3px 4px;
+}
+table {
+    border: 1px solid black;
+    wi
+
+}
+
+ #tova {
+font-family: 'Langar', Arial; 
+ }
