@@ -14,4 +14,4 @@ function trans(coor) {
     return ['abcdefghijk'.indexOf(coor[0]), '12345678'.indexOf(coor[1])]
 }
 
-console.log(bishop('a1', 'b4', 2))
+console.log(bishop('a1', 'b6', 2))

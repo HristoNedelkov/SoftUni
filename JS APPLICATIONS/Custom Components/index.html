@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web components</title>
+    <style>
+        h2 {
+            color: firebrick;
+            align-self: center;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is in the body</h2>
+    <hr>
+    <app-root slot="Superman">
+        <p slot="description">
+            Some fency description! Here for the first one?
+        </p>
+        <ul slot="superpowers">
+            <li>X-ray</li>
+            <li>Cold Breath</li>
+            <li>Teleporting</li>
+        </ul>
+    </app-root>
+    <app-root name="Batman">
+        <p slot="description"> Tuk shte ima tekst za vtoroto, Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Rem, nam?</p>
+    </app-root>
+    <app-root name="Jorj"></app-root>
+    <app-root name="masile"></app-root>
+    <app-root name="icko"> I mu davam malko tekst --- Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+        suscipit?</app-root>
+    <script type="module">
+
+        import { html, render } from './node_modules/lit-html/lit-html.js';
+
+        let template = (state) => html`
+      
+            <div style="background-color:khaki; width: 300px; border: solid 15px darkred; margin-bottom: 30px; margin-top: 30px; margin-left: 450px;">
+                <h2>${state.name}</h2>
+                <p style="font-family: Cambria, Cochin;">Description: <slot name="description"></slot>
+                </p>
+                <slot name="superpowers"></slot>
+                <button @click=${state.handler}> Click me</button>
+         </div>
+         `
+        class AppRoot extends HTMLElement {
+            constructor() {
+                super()
+                let state = {
+                    name: this.getAttribute('name'),
+                    handler: (e) => {
+                        console.log('Clicked the BTN :D ')
+                    },
+                }
+                this.attachShadow({ mode: 'open', })
+                console.log(this.getAttribute('name'));
+                render(template(state), this.shadowRoot)
+            }
+        }
+        window.customElements.define('app-root', AppRoot)
+
+    </script>
+</body>
+
+</html>
+
+<!--
+    Some more additioadditional Libraries 
+    - Hybrids
+    - Lit Element
+    - Polymer 
+    - Stencil
+-->
