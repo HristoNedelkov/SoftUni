@@ -42,7 +42,7 @@ function requestHandler(req, res) {
                     res.write(view);
                     res.end();
                 });
-
+ 
             
             pubSub.publish('cats', params.name);
             break;

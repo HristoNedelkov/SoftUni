@@ -1,4 +1,4 @@
-const events = {};
+ const events = {};
 
 module.exports = {
     // Publish, emit, trigger
