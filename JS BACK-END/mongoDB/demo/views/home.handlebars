@@ -1,0 +1,26 @@
+<div id="error" style="display: none;">
+    <h1>ERROR (please, enter valid name and age!)</h1>
+</div>
+
+<div id="success" style="display: none;">
+    <h1>access Alowed!</h1>
+    <p></p>
+</div>
+
+
+<main>
+
+    <div>
+        <input type="text">
+        <button>
+            Click here
+        </button>
+        <ul>
+            <h1>Some requests:</h1>
+            {{#each result}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+</main>
