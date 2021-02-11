@@ -1,6 +1,8 @@
 const { Router } = require('express');
 const router = Router();
 const authService = require('../services/authService');
+
+
 router.get('/login', (req, res) => {
     res.render('login')
 });
@@ -23,7 +25,7 @@ router.get('/register', (req, res) => {
 router.post('/register', async (req, res) => {
     try {
         await authService.register(req.body)
-        res.redirect('/products')
+        res.redirect('/auth/login')
     } catch (error) {
         res.render('register', { error })
     }

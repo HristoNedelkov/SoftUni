@@ -1,9 +1,8 @@
 const { MongooseDocument, Mongoose } = require("mongoose");
-
+const {DB_CONNECTION} = require('../config/index')
 const mongoose = require('mongoose');
 
-const uri = (name) => `mongodb+srv://icko:ickocluster0@cluster0.jrp36.mongodb.net/${name}?retryWrites=true&w=majority`;
-mongoose.connect(uri('ckuster0'), { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useFindAndModify', false);
 const db = mongoose.connection
 

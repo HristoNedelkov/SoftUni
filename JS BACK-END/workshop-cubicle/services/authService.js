@@ -1,11 +1,11 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const saltRounds = 3;
-let secretWord = 'somesecret'
+const {SALT_ROUNDS} = require('../config/index');;
+let {SECRET} = require('../config/index');
 
 const register = async (data) => {
-    let salt = await bcrypt.genSalt(saltRounds)
+    let salt = await bcrypt.genSalt(SALT_ROUNDS)
 
     if (data.password !== data.repeatPassword) {
         throw new Error('Passwords missmatch!')
@@ -25,7 +25,7 @@ const login = async ({ username, password }) => {
     // comapare pass with hash
     let isIdentical = await bcrypt.compare(password, user.password)
     if (!isIdentical) throw { message: 'Wrong PASSWORD!' }
-    let token = jwt.sign({ _id: user._id }, secretWord)
+    let token = jwt.sign({ _id: user._id }, SECRET)
 
     return token
 
