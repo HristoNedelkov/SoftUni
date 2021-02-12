@@ -6,16 +6,15 @@ const { validateProduct } = require('./helpers/productHelpers');
 const router = Router();
 
 router.get('/', (req, res) => {
-    console.log('asfasf')
-    let products = productService.getAll(req.query)
+    productService.getAll(req.query)
         .then(products => {
-
             res.render('home', { title: 'Browse', products });
         })
         .catch(e => {
             res.status(500).end()
         })
 });
+
 
 router.get('/create', (req, res) => {
     res.render('create', { title: 'Create' });

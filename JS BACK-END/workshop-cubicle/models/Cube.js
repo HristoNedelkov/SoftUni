@@ -1,7 +1,3 @@
-const fs = require('fs/promises');
-const path = require('path');
-const Model = require('./model');
-
 
 const mongoose = require('mongoose');
 

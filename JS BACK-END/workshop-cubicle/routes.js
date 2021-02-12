@@ -3,13 +3,17 @@ const router = Router();
 
 const productController = require('./controllers/productController');
 const homeController = require('./controllers/homeController');
-const accessoryController = require('./controllers/accessoryController'); 
+const accessoryController = require('./controllers/accessoryController');
 const authController = require('./controllers/authController');
 
+const isAuth = require('./middlewares/isAuthenticated');
+const isGuest = require('./middlewares/isGuest');
+
 router.use('/', homeController);
-router.use('/auth', authController);
+router.use('/auth', isGuest, authController);
 router.use('/products', productController);
 router.use('/accessories', accessoryController);
+
 
 router.get('*', (req, res) => {
      res.render('404');

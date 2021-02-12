@@ -1,6 +1,6 @@
 const config = {
     development: {
-        PORT: 5000,
+        PORT: 3000,
         DB_CONNECTION: 'mongodb+srv://icko:ickocluster0@cluster0.jrp36.mongodb.net/cluster0?retryWrites=true&w=majority',
         SALT_ROUNDS: 3,
         SECRET: 'somesecret',

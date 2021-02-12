@@ -1,5 +1,4 @@
-const { MongooseDocument, Mongoose } = require("mongoose");
-const {DB_CONNECTION} = require('../config/index')
+const DB_CONNECTION = 'mongodb+srv://icko:ickocluster0@cluster0.jrp36.mongodb.net/ckuster0?retryWrites=true&w=majority'
 const mongoose = require('mongoose');
 
 mongoose.connect(DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });

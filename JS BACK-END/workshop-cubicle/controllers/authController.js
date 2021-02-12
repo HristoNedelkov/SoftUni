@@ -5,6 +5,7 @@ const authService = require('../services/authService');
 
 router.get('/login', (req, res) => {
     res.render('login')
+    req.user
 });
 router.post('/login', async (req, res) => {
 
