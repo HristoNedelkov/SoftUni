@@ -10,9 +10,9 @@ const isAuth = require('./middlewares/isAuthenticated');
 const isGuest = require('./middlewares/isGuest');
 
 router.use('/', homeController);
-router.use('/auth', isGuest, authController);
+router.use('/auth', authController);
 router.use('/products', productController);
-router.use('/accessories', accessoryController);
+router.use('/accessories',isAuth, accessoryController);
 
 
 router.get('*', (req, res) => {
