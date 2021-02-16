@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const router = Router();
-const accessoruService = require('../services/accessoryService');
+const accessoreService = require('../services/accessoryService');
 
 router.get('/create', (req,res)=> {
     res.render('createAccessory');
@@ -8,7 +8,7 @@ router.get('/create', (req,res)=> {
 })
 
 router.post('/create', (req,res)=> {
-    accessoruService.createAccessory(req.body)
+    accessoreService.createAccessory(req.body)
     .then(res=> {
         console.log('Added new accessory!')
     })

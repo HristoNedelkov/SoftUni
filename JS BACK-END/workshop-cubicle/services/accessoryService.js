@@ -1,6 +1,6 @@
-const e = require('express');
 const Accessory = require('../models/Accessory');
 const Cube = require('../models/Cube');
+
 function createAccessory(data) {
     let accessory = new Accessory(data)
 
