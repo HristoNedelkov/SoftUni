@@ -1,6 +1,5 @@
 function solve (arr, arr2) {
 arr.forEach(element => {
-
     if (arr2.includes(element)) {
         console.log(element);
         

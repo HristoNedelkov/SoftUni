@@ -1,0 +1,9 @@
+{
+    "posts": [
+        {
+            "id":1 ,
+            "content": " Some content here",
+            "author": "Icko"
+        }
+    ]
+}

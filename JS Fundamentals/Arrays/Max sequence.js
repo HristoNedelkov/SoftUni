@@ -2,7 +2,7 @@ function solve(a) {
   let number = a[0]
 let count = []
   for (const num of a) {
-      count += number ==
+      count += number 
   }
     
    }
