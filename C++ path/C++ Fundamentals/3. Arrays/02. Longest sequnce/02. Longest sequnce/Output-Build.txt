@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: 02. Longest sequnce, Configuration: Debug Win32 ------
+1>02. Longest sequnce.cpp
+1>C:\Users\ico19\Desktop\SoftUni\SoftUni\C++ path\C++ Fundamentals\3. Arrays\02. Longest sequnce\02. Longest sequnce\02. Longest sequnce.cpp(25): error C4700: uninitialized local variable 'lastNum' used
+1>Done building project "02. Longest sequnce.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
