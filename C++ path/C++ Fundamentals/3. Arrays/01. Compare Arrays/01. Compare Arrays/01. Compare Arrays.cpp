@@ -2,8 +2,8 @@
 #include <array>
  
 
-
 const int size = 100;
+
 bool compareArrays(std::array <int,size> arr1, int length1, std::array <int,size> arr2, int length2) {
 	if (length1 != length2) {
 		return false;
@@ -21,6 +21,7 @@ int main()
 	int size1;
 	int size2;
 
+
 	std::array<int, size> arr1;
 	std::array<int, size> arr2;
 	std::cin >> size1;
@@ -35,7 +36,7 @@ int main()
 		std::cin >> num;
 		arr2[j] = num;
 	}
-	std::string res = compareArrays(arr1, size1, arr2, size2) == 1 ? "equal" : "not equal";
+	std::string res = compareArrays(arr1, size1, arr2, size2) == 1 ? "equal" : "Not equal";
 	std::cout << res << std::endl;
 
 }

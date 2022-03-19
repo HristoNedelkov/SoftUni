@@ -1,25 +1,39 @@
+#include <cctype>
 #include <iostream>
+#include <cstring>
 #include <string>
-#include <sstream>
 
 int main()
 {
 	std::string line;
-	std::string word;
-	std::getline(std::cin, line);   //To Input a String
-	std::stringstream isstr(line);
-
-	std::string res;
-	while (isstr >> word){
-		char a = word[0] - 32;
-		word[0] = a;
-
-		res += a;
-		// You need to add the rest of the word: :))
-		res += " ";
-
+	std::getline(std::cin, line);
+	//use isalpha :)
+	for (auto i = 0; i < line.length(); i++) {
+		
 	}
-
-	std::cout << res << std::endl;
+// 	while (isstr >> word){
+// 		std::size_t foundAtIndexA = word.find(",");
+// 
+// 		if (foundAtIndex < 100) {
+// 			char afterCommaChar = toupper(word[foundAtIndex + 1]);
+// 			word[foundAtIndex + 1] = afterCommaChar;
+// 		}
+// 		if (isupper(word[0])) {
+// 			res += word;
+// 			res += " ";
+// 			continue;
+// 		};
+// 		
+// 		char a = toupper(word[0]);
+// 		word[0] = a;
+// 		std::string restChars = word.substr(1, word.length() - 1);
+// 			
+// 		res += a;
+// 		res += restChars;
+// 		res += " ";
+// 
+// 	}
+// 
+// 	std::cout << res << std::endl;
 	return 0;
 }

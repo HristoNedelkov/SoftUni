@@ -2,45 +2,48 @@
 #include <iostream>
 #include <array>
 #include <string>
-#include <sstream>
-#include <climits>
 
-using namespace std;
 int main()
 {
-	int nNums;
-	cin >> nNums;
-	cin.ignore();
+	int size;
+	int mostRepeated;
+	int mostCount = 0;
+	int arr[100];
 
-	int num;
-	string line;
+	std::cin >> size;
+	for (int i = 0; i < size; i++) {
+		int integer;
+		std::cin >> integer;
+		arr[i] = integer;
+	}
 
-	getline(cin, line);
-	istringstream  sstr(line);
-
-	int lastNum;
-	sstr >> lastNum;
-	int mostRepeatedCount = 0;
-	int mostRepeatedNum;
-	int currRepeats = 1;
-	while (sstr >> num) {
-		if (lastNum == num) {
-			currRepeats++;
-		}
-		else {
-			if (currRepeats > mostRepeatedCount) {
-				mostRepeatedCount = currRepeats;
-				mostRepeatedNum = lastNum;
+	for (int j = 0; j < size; j++) {
+		int currNum = arr[j];
+		int currCounts = 0;
+		for (int a = 0; a < size; a++) {
+			if (arr[a] == currNum) {
+				currCounts++;
 			}
-			lastNum = num;
+
+		}
+		if (currCounts >= mostCount) {
+			mostRepeated = currNum;
+			mostCount = currCounts;
 		}
 
 	}
 
-	for (int i = 1; i <= mostRepeatedCount; i++) {
-		cout << mostRepeatedNum << " ";
+	std::cout << mostRepeated << " - That's the most repeated number," << std::endl;
+	std::cout << mostCount << " - That's the count;" << std::endl;
+
+	std::string res = "";
+
+	for (int f = 0; f < mostCount; f++) {
+		res += std::to_string(mostRepeated);
+		res += " ";
 	}
 
+	std::cout << res;
 
 }
 

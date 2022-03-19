@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Merge Trains", "Merge Trains\Merge Trains.vcxproj", "{8D313AAB-0C51-440F-A36D-0431CA89AD54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Debug|x64.ActiveCfg = Debug|x64
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Debug|x64.Build.0 = Debug|x64
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Debug|x86.Build.0 = Debug|Win32
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Release|x64.ActiveCfg = Release|x64
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Release|x64.Build.0 = Release|x64
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Release|x86.ActiveCfg = Release|Win32
+		{8D313AAB-0C51-440F-A36D-0431CA89AD54}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A857BD5C-8250-4801-9091-E929F015AC3B}
+	EndGlobalSection
+EndGlobal
