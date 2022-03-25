@@ -9,8 +9,8 @@ bool isLegitimateExpression() {
 	int lBracket = 0;
 	int rBracket = 0;
 	while (std::cin >> letter) {
-		if (letter == '(') { lBracket++; }
-		else if (letter == ')') { rBracket++; }
+		if (letter == '(')  lBracket++; 
+		else if (letter == ')')  rBracket++; 
 	}
 	if (lBracket == rBracket) { return true; }
 	else { return false; }

@@ -8,10 +8,11 @@ int main()
 	int size;
 	int mostRepeated;
 	int mostCount = 0;
+	int indexArr = 0;
+	std::array<int,100> mostRepeated;
 	int arr[100];
+	int countOfNums = 0;
 
-	int indexInArr = 0;
-	int mostRepeated[100];
 	std::cin >> size;
 	for (int i = 0; i < size; i++) {
 		int integer;
@@ -28,7 +29,7 @@ int main()
 				currCounts++;
 			}
 		}
-		if (currCounts >= mostCount) {		
+		if (currCounts >= mostCount) {
 			mostCount = currCounts;
 		}
 
@@ -42,11 +43,13 @@ int main()
 				currCounts++;
 			}
 		}
-		if (currCounts == mostCount) {
-			mostRepeated[indexInArr] = currNum;
-
+		if (currCounts >= mostCount) {
+			 
+			mostRepeated[indexArr] = currNum;
+			indexArr++;
 		}
-
 	}
+
+
 }
 
